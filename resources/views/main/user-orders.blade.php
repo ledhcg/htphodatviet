@@ -31,6 +31,8 @@
                             bg-primary
                             @elseif($order->order_status == 'DELIVERED')
                             bg-success
+                            @elseif($order->order_status == 'DELETE')
+                            bg-dark
                             @endif
                     m-0">{{$order->order_status}}</span></td>
                     <td class="py-3">{{number_format($order->order_total, 1, ',', ' ')}} ₽</td>
